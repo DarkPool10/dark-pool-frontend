@@ -95,7 +95,8 @@
     "lingui:prepare": "NODE_ENV=development yarn extract && yarn compile",
     "lingui:generate": "NODE_ENV=development lingui extract --overwrite",
     "tscheck": "tsc -p tsconfig.json --noEmit",
-    "prettier": "prettier --write src/**/*.{js,ts,jsx,tsx,css,scss}"
+    "prettier": "prettier --write src/**/*.{js,ts,jsx,tsx,css,scss}",
+    "deploy": "vc --cwd build --prod"
   },
   "eslintConfig": {
     "extends": [
