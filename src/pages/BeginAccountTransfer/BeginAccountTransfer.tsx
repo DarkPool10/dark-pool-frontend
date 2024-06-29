@@ -163,7 +163,7 @@ export default function BeginAccountTransfer() {
       return t`Wallet is not connected`;
     }
     if (hasVestedGmx) {
-      return t`Vested GMX not withdrawn`;
+      return t`Vested DarkPool10 not withdrawn`;
     }
     if (hasVestedGlp) {
       return t`Vested GLP not withdrawn`;
@@ -176,11 +176,11 @@ export default function BeginAccountTransfer() {
     }
 
     if (hasVestedAffiliate && !isAffiliateVesterSkipValidation) {
-      return t`Vested GMX not withdrawn`;
+      return t`Vested DarkPool10 not withdrawn`;
     }
 
     if (hasStakedGmx || hasStakedGlp) {
-      return t`Receiver has staked GMX/GLP before`;
+      return t`Receiver has staked DarkPool10/GLP before`;
     }
 
     if ((parsedReceiver || "").toString().toLowerCase() === (account || "").toString().toLowerCase()) {
@@ -227,7 +227,7 @@ export default function BeginAccountTransfer() {
       return error;
     }
     if (needApproval) {
-      return t`Approve GMX`;
+      return t`Approve DarkPool10`;
     }
     if (isApproving) {
       return t`Approving...`;
@@ -317,9 +317,9 @@ export default function BeginAccountTransfer() {
           <Trans>
             Please only use this for full account transfers.
             <br />
-            This will transfer all your GMX, esGMX, GLP, Multiplier Points and voting power to your new account.
+            This will transfer all your DarkPool10, esGMX, GLP, Multiplier Points and voting power to your new account.
             <br />
-            Transfers are only supported if the receiving account has not staked GMX or GLP tokens before.
+            Transfers are only supported if the receiving account has not staked DarkPool10 or GLP tokens before.
             <br />
             Transfers are one-way, you will not be able to transfer staked tokens back to the sending account.
           </Trans>
@@ -349,7 +349,7 @@ export default function BeginAccountTransfer() {
           </div>
           <div className="BeginAccountTransfer-validations">
             <ValidationRow isValid={!hasVestedGmx}>
-              <Trans>Sender has withdrawn all tokens from GMX Vesting Vault</Trans>
+              <Trans>Sender has withdrawn all tokens from DarkPool10 Vesting Vault</Trans>
             </ValidationRow>
             <ValidationRow isValid={!hasVestedGlp}>
               <Trans>Sender has withdrawn all tokens from GLP Vesting Vault</Trans>
@@ -378,7 +378,7 @@ export default function BeginAccountTransfer() {
             )}
 
             <ValidationRow isValid={!hasStakedGmx}>
-              <Trans>Receiver has not staked GMX tokens before</Trans>
+              <Trans>Receiver has not staked DarkPool10 tokens before</Trans>
             </ValidationRow>
             <ValidationRow isValid={!hasStakedGlp}>
               <Trans>Receiver has not staked GLP tokens before</Trans>

@@ -1021,7 +1021,7 @@ export default function GlpSwap(props) {
                           showDollar={false}
                         />
                         <StatsTooltipRow
-                          label={t`Escrowed GMX APR`}
+                          label={t`Escrowed DarkPool10 APR`}
                           value={`${formatAmount(stakedGlpTrackerApr, 2, 2, false)}%`}
                           showDollar={false}
                         />
@@ -1098,7 +1098,7 @@ export default function GlpSwap(props) {
                 onClickMax={fillMaxAmount}
                 topLeftValue={payBalance}
               >
-                <div className="selected-token inline-flex items-center">
+                <div className="inline-flex items-center selected-token">
                   <img className="mr-5" width={20} src={glpIcon} alt="GLP" />
                   GLP
                 </div>
@@ -1129,7 +1129,7 @@ export default function GlpSwap(props) {
                 defaultTokenName="GLP"
                 preventFocusOnLabelClick="right"
               >
-                <div className="selected-token inline-flex items-center">
+                <div className="inline-flex items-center selected-token">
                   <img className="mr-5" width={20} src={glpIcon} alt="GLP" />
                   GLP
                 </div>

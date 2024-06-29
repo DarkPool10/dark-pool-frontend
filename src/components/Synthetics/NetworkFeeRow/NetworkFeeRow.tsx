@@ -138,8 +138,8 @@ export function NetworkFeeRow({ executionFee, isAdditionOrdersMsg }: Props) {
           renderContent={() => (
             <div>
               <Trans>
-                Maximum execution fee paid to the network. This fee is a blockchain cost not specific to GMX, and it
-                does not impact your collateral.
+                Maximum execution fee paid to the network. This fee is a blockchain cost not specific to DarkPool10, and
+                it does not impact your collateral.
               </Trans>
             </div>
           )}

@@ -101,15 +101,15 @@ export default function Actions() {
       {checkSummedAccount.length > 0 && (
         <div className="Actions-section">
           <PageTitle
-            title={t`GMX V1 Account`}
+            title={t`DarkPool10 V1 Account`}
             subtitle={
               <>
-                <Trans>GMX V1 Arbitrum information for account: {checkSummedAccount}</Trans>
+                <Trans>DarkPool10 V1 Arbitrum information for account: {checkSummedAccount}</Trans>
                 {getIsSyntheticsSupported(chainId) && (
                   <Trans>
                     <div>
                       <ExternalLink newTab={false} href={`/#/actions/${checkSummedAccount}`}>
-                        Check on GMX V2 {networkName}
+                        Check on DarkPool10 V2 {networkName}
                       </ExternalLink>{" "}
                       or{" "}
                       <span
@@ -201,15 +201,15 @@ export default function Actions() {
           ) : (
             <PageTitle
               isTop
-              title={t`GMX V1 Actions`}
+              title={t`DarkPool10 V1 Actions`}
               subtitle={
                 <>
-                  <Trans>GMX V1 {networkName} actions for all accounts.</Trans>
+                  <Trans>DarkPool10 V1 {networkName} actions for all accounts.</Trans>
                   {getIsSyntheticsSupported(chainId) && (
                     <Trans>
                       <div>
                         <ExternalLink newTab={false} href="/#/actions">
-                          Check on GMX V2 {networkName}
+                          Check on DarkPool10 V2 {networkName}
                         </ExternalLink>{" "}
                         or{" "}
                         <span

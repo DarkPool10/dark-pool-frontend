@@ -62,14 +62,14 @@ export default function BuyGMX() {
         <div className="section-title-block">
           <div className="section-title-content">
             <div className="Page-title">
-              <Trans>Buy GMX on {chainName}</Trans>
+              <Trans>Buy DarkPool10 on {chainName}</Trans>
               <img className="Page-title-icon ml-5 inline-block" src={icons.network} alt={chainName} />
             </div>
             <div className="Page-description">
               <Trans>Choose to buy from decentralized or centralized exchanges.</Trans>
               <br />
               <Trans>
-                To purchase GMX on the {isArbitrum ? "Avalanche" : "Arbitrum"} blockchain, please{" "}
+                To purchase DarkPool10 on the {isArbitrum ? "Avalanche" : "Arbitrum"} blockchain, please{" "}
                 <span onClick={() => onNetworkSelect(isArbitrum ? AVALANCHE : ARBITRUM)}>change your network</span>.
               </Trans>
             </div>
@@ -183,19 +183,19 @@ export default function BuyGMX() {
 }
 
 const UNISWAP_IMG_INFO = { src: uniswapArbitrumIcon, alt: "Uniswap" };
-const GMX_IMG_INFO = { src: gmxArbitrumIcon, alt: "GMX" };
+const GMX_IMG_INFO = { src: gmxArbitrumIcon, alt: "DarkPool10" };
 const TRADERJOE_IMG_INFO = { src: traderjoeIcon, alt: "Traderjoe" };
 const BOND_PROTOCOL_IMG_INFO = { src: bondProtocolIcon, alt: "Bond Protocol" };
 
 function DecentralisedExchanges({ chainId, externalLinks }) {
   const isArbitrum = chainId === ARBITRUM;
   return (
-    <Card title={t`Buy GMX from decentralized exchanges`}>
+    <Card title={t`Buy DarkPool10 from decentralized exchanges`}>
       <div className="App-card-content">
         {isArbitrum ? (
           <div className="exchange-info-group">
             <div className="BuyGMXGLP-description">
-              <Trans>Buy GMX from Uniswap or directly on GMX (make sure to select Arbitrum):</Trans>
+              <Trans>Buy DarkPool10 from Uniswap or directly on DarkPool10 (make sure to select Arbitrum):</Trans>
             </div>
             <div className="buttons-group">
               <Button
@@ -214,14 +214,14 @@ function DecentralisedExchanges({ chainId, externalLinks }) {
                 to={externalLinks.buyGmx.gmx}
                 showExternalLinkArrow={false}
               >
-                GMX
+                DarkPool10
               </Button>
             </div>
           </div>
         ) : (
           <div className="exchange-info-group">
             <div className="BuyGMXGLP-description">
-              <Trans>Buy GMX from Traderjoe:</Trans>
+              <Trans>Buy DarkPool10 from Traderjoe:</Trans>
             </div>
             <div className="buttons-group col-1">
               <Button
@@ -238,7 +238,7 @@ function DecentralisedExchanges({ chainId, externalLinks }) {
         )}
         <div className="exchange-info-group">
           <div className="BuyGMXGLP-description">
-            <Trans>Buy GMX using Decentralized Exchange Aggregators:</Trans>
+            <Trans>Buy DarkPool10 using Decentralized Exchange Aggregators:</Trans>
           </div>
           <div className="buttons-group">
             {DECENTRALISED_AGGRIGATORS.filter((e) => chainId in e.links).map((exchange) => {
@@ -262,7 +262,7 @@ function DecentralisedExchanges({ chainId, externalLinks }) {
         </div>
         <div className="exchange-info-group">
           <div className="BuyGMXGLP-description">
-            <Trans>Buy GMX using any token from any network:</Trans>
+            <Trans>Buy DarkPool10 using any token from any network:</Trans>
           </div>
           <div className="buttons-group">
             {GMX_FROM_ANY_NETWORKS.filter((e) => chainId in e.links).map((exchange) => {
@@ -287,7 +287,7 @@ function DecentralisedExchanges({ chainId, externalLinks }) {
         {isArbitrum && (
           <div className="exchange-info-group">
             <div className="BuyGMXGLP-description">
-              <Trans>GMX bonds can be bought on Bond Protocol with a discount and a small vesting period:</Trans>
+              <Trans>DarkPool10 bonds can be bought on Bond Protocol with a discount and a small vesting period:</Trans>
             </div>
             <div className="buttons-group col-1">
               <Button
@@ -309,11 +309,11 @@ function DecentralisedExchanges({ chainId, externalLinks }) {
 
 function CentralisedExchanges({ chainId }) {
   return (
-    <Card title={t`Buy GMX from centralized services`}>
+    <Card title={t`Buy DarkPool10 from centralized services`}>
       <div className="App-card-content">
         <div className="exchange-info-group">
           <div className="BuyGMXGLP-description">
-            <Trans>Buy GMX from centralized exchanges:</Trans>
+            <Trans>Buy DarkPool10 from centralized exchanges:</Trans>
           </div>
           <div className="buttons-group">
             {CENTRALISED_EXCHANGES.filter((e) => chainId in e.links).map((exchange) => {
@@ -338,7 +338,7 @@ function CentralisedExchanges({ chainId }) {
 
         <div className="exchange-info-group">
           <div className="BuyGMXGLP-description">
-            <Trans>Buy GMX using FIAT gateways:</Trans>
+            <Trans>Buy DarkPool10 using FIAT gateways:</Trans>
           </div>
           <div className="buttons-group col-2">
             {FIAT_GATEWAYS.filter((e) => chainId in e.links).map((exchange) => {

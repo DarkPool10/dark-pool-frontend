@@ -500,7 +500,7 @@ function ApyTooltipContent() {
         <br />
         <p>
           Check GM pools' performance against other LP Positions in the{" "}
-          <ExternalLink href="https://dune.com/gmx-io/gmx-analytics">GMX Dune Dashboard</ExternalLink>.
+          <ExternalLink href="https://dune.com/gmx-io/gmx-analytics">DarkPool10 Dune Dashboard</ExternalLink>.
         </p>
       </Trans>
     </p>

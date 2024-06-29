@@ -39,7 +39,7 @@ export const appEventsData: EventData[] = [
       `Arbitrum STIP incentives are live for:`,
       "",
       "• Arbitrum GM Pools Liquidity.",
-      "• Arbitrum GMX V2 Trading.",
+      "• Arbitrum DarkPool10 V2 Trading.",
     ],
     link: {
       text: "Read more.",
@@ -64,7 +64,7 @@ export const appEventsData: EventData[] = [
     title: "Binance Web3 Wallet Trading Campaign is Live",
     isActive: true,
     endDate: "09 Apr 2024, 23:59",
-    bodyText: ["Complete any or all of the six GMX campaign tasks and qualify for rewards!"],
+    bodyText: ["Complete any or all of the six DarkPool10 campaign tasks and qualify for rewards!"],
     link: {
       text: "Check your tasks and their completion status",
       href: "https://www.binance.com/en/activity/mission/gmx-airdrop",
@@ -86,14 +86,15 @@ export const appEventsData: EventData[] = [
   },
   {
     id: "delegate-voting-power",
-    title: "Delegate your GMX Voting Power",
+    title: "Delegate your DarkPool10 Voting Power",
     isActive: false,
     endDate: "6 Jun 2024, 23:59",
     bodyText: (
       <>
-        <ExternalLink href="https://www.tally.xyz/gov/gmx">The GMX DAO is now live on Tally</ExternalLink>. Please{" "}
+        <ExternalLink href="https://www.tally.xyz/gov/gmx">The DarkPool10 DAO is now live on Tally</ExternalLink>.
+        Please{" "}
         <ExternalLink href="https://www.tally.xyz/gov/gmx/my-voting-power">delegate your voting power</ExternalLink>{" "}
-        before staking or claiming GMX rewards.
+        before staking or claiming DarkPool10 rewards.
       </>
     ),
   },
@@ -121,10 +122,10 @@ export const appEventsData: EventData[] = [
   },
   {
     id: "gmxusdc-market",
-    title: "GMX/USD market added on Arbitrum",
+    title: "DarkPool10/USD market added on Arbitrum",
     isActive: true,
     endDate: "14 Jun 2024, 0:00",
-    bodyText: "Trade GMX/USD, or provide liquidity using GMX or USDC.",
+    bodyText: "Trade DarkPool10/USD, or provide liquidity using DarkPool10 or USDC.",
     link: {
       text: "Read more",
       href: "https://snapshot.org/#/gmx.eth/proposal/0x5fc32bea68c7e2ee237c86bae73859f742304c130df9a44495b816cc62b4f30f",

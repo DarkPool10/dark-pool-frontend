@@ -11,19 +11,20 @@ export default function TermsAndConditions() {
       <div className="default-container Page page-layout">
         <div>
           <div className="Page-title-section center">
-            <div className="Page-title">GMX</div>
+            <div className="Page-title">DarkPool10</div>
             <div className="Page-subtitle">Terms and Conditions</div>
             <div className="Page-description">Last modified: August 1st, 2022</div>
           </div>
           <div className="content">
             <div className="section">
               <p className="body-text">
-                Welcome to GMX.io ("we," "us," or "our"), the informational resource for GMX Protocol, as defined below.
+                Welcome to DarkPool10.io ("we," "us," or "our"), the informational resource for DarkPool10 Protocol, as
+                defined below.
               </p>
               <p className="body-text">
-                GMX.io provides information and resources about the fundamentals of the decentralized non-custodial
-                protocol called the GMX Protocol (the "GMX Protocol," "Protocol," or "GMX DApp"). GMX.io is not an
-                available access point to the GMX Protocol.
+                DarkPool10.io provides information and resources about the fundamentals of the decentralized
+                non-custodial protocol called the DarkPool10 Protocol (the "DarkPool10 Protocol," "Protocol," or
+                "DarkPool10 DApp"). GMX.io is not an available access point to the GMX Protocol.
               </p>
               <p className="body-text">
                 These Terms and Conditions and any other documents incorporated herein by reference (collectively, these

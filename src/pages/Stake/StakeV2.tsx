@@ -224,7 +224,7 @@ function StakeModal(props: {
           <AlertInfo type="warning" className={cx("DelegateGMXAlertInfo")} textColor="text-yellow-500">
             <Trans>
               <ExternalLink href={GMX_DAO_LINKS.VOTING_POWER} className="display-inline">
-                Delegate your undelegated {formatAmount(govTokenAmount, 18, 2, true)} GMX DAO
+                Delegate your undelegated {formatAmount(govTokenAmount, 18, 2, true)} DarkPool10 DAO
               </ExternalLink>
               <span>&nbsp;voting power before staking.</span>
             </Trans>
@@ -248,7 +248,7 @@ function StakeModal(props: {
         >
           <div className="Stake-modal-icons">
             <img
-              className="icon mr-5 h-22"
+              className="mr-5 icon h-22"
               height="22"
               src={icons[stakingTokenSymbol.toLowerCase()]}
               alt={stakingTokenSymbol}
@@ -410,7 +410,7 @@ function UnstakeModal(props: {
         >
           <div className="Stake-modal-icons">
             <img
-              className="icon mr-5 h-22"
+              className="mr-5 icon h-22"
               height="22"
               src={icons[unstakingTokenSymbol.toLowerCase()]}
               alt={unstakingTokenSymbol}
@@ -588,7 +588,7 @@ function VesterDepositModal(props: {
             showMaxButton={false}
           >
             <div className="Stake-modal-icons">
-              <img className="icon mr-5 h-22" height="22" src={icons.esgmx} alt="esGMX" />
+              <img className="mr-5 icon h-22" height="22" src={icons.esgmx} alt="esGMX" />
               esGMX
             </div>
           </BuyInputSection>
@@ -734,10 +734,10 @@ function VesterWithdrawModal(props: {
             This will withdraw and unreserve all tokens as well as pause vesting.
             <br />
             <br />
-            esGMX tokens that have been converted to GMX will be claimed and remain as GMX tokens.
+            esGMX tokens that have been converted to DarkPool10 will be claimed and remain as DarkPool10 tokens.
             <br />
             <br />
-            To claim GMX tokens without withdrawing, use the "Claim" button under the Total Rewards section.
+            To claim DarkPool10 tokens without withdrawing, use the "Claim" button under the Total Rewards section.
             <br />
             <br />
           </div>
@@ -785,10 +785,10 @@ function AffiliateVesterWithdrawModal(props) {
             This will withdraw all esGMX tokens as well as pause vesting.
             <br />
             <br />
-            esGMX tokens that have been converted to GMX will be claimed and remain as GMX tokens.
+            esGMX tokens that have been converted to DarkPool10 will be claimed and remain as DarkPool10 tokens.
             <br />
             <br />
-            To claim GMX tokens without withdrawing, use the "Claim" button.
+            To claim DarkPool10 tokens without withdrawing, use the "Claim" button.
             <br />
             <br />
           </div>
@@ -888,10 +888,10 @@ function CompoundModal(props: {
 
   const getPrimaryText = () => {
     if (isApproving) {
-      return t`Approving GMX...`;
+      return t`Approving DarkPool10...`;
     }
     if (needApproval) {
-      return t`Approve GMX`;
+      return t`Approve DarkPool10`;
     }
     if (isCompounding) {
       return t`Compounding...`;
@@ -987,7 +987,7 @@ function CompoundModal(props: {
           <AlertInfo type="info">
             <Trans>
               You have reached the maximum Boost Percentage. Stake an additional{" "}
-              {formatAmount(recommendStakeGmx, 18, 2, true)} GMX or esGMX to be able to stake your unstaked{" "}
+              {formatAmount(recommendStakeGmx, 18, 2, true)} DarkPool10 or esGMX to be able to stake your unstaked{" "}
               {formatAmount(accumulatedBnGMXAmount, 18, 4, true)} Multiplier Points.
             </Trans>
           </AlertInfo>
@@ -996,7 +996,7 @@ function CompoundModal(props: {
           <AlertInfo type="warning" className={cx("DelegateGMXAlertInfo")} textColor="text-yellow-500">
             <Trans>
               <ExternalLink href={GMX_DAO_LINKS.VOTING_POWER} className="display-inline">
-                Delegate your undelegated {formatAmount(govTokenAmount, 18, 2, true)} GMX DAO
+                Delegate your undelegated {formatAmount(govTokenAmount, 18, 2, true)} DarkPool10 DAO
               </ExternalLink>
               <span>&nbsp;voting power before compounding.</span>
             </Trans>
@@ -1014,12 +1014,12 @@ function CompoundModal(props: {
           </div>
           <div>
             <Checkbox isChecked={shouldClaimGmx} setIsChecked={setShouldClaimGmx} disabled={shouldStakeGmx}>
-              <Trans>Claim GMX Rewards</Trans>
+              <Trans>Claim DarkPool10 Rewards</Trans>
             </Checkbox>
           </div>
           <div>
             <Checkbox isChecked={shouldStakeGmx} setIsChecked={toggleShouldStakeGmx}>
-              <Trans>Stake GMX Rewards</Trans>
+              <Trans>Stake DarkPool10 Rewards</Trans>
             </Checkbox>
           </div>
           <div>
@@ -1155,7 +1155,7 @@ function ClaimModal(props: {
           <AlertInfo type="warning" className={cx("DelegateGMXAlertInfo")} textColor="text-yellow-500">
             <Trans>
               <ExternalLink href={GMX_DAO_LINKS.VOTING_POWER} className="display-inline">
-                Delegate your undelegated {formatAmount(govTokenAmount, 18, 2, true)} GMX DAO
+                Delegate your undelegated {formatAmount(govTokenAmount, 18, 2, true)} DarkPool10 DAO
               </ExternalLink>
               <span>&nbsp;voting power before compounding.</span>
             </Trans>
@@ -1164,7 +1164,7 @@ function ClaimModal(props: {
         <div className="CompoundModal-menu">
           <div>
             <Checkbox isChecked={shouldClaimGmx} setIsChecked={setShouldClaimGmx}>
-              <Trans>Claim GMX Rewards</Trans>
+              <Trans>Claim DarkPool10 Rewards</Trans>
             </Checkbox>
           </div>
           <div>
@@ -1246,11 +1246,11 @@ function AffiliateClaimModal(props: {
       <Modal isVisible={isVisible} setIsVisible={setIsVisible} label={t`Claim Affiliate Vault Rewards`}>
         <Trans>
           <div>
-            This will claim {formatAmount(totalVesterRewards, 18, 4, true)} GMX.
+            This will claim {formatAmount(totalVesterRewards, 18, 4, true)} DarkPool10.
             <br />
             <br />
-            After claiming, you can stake these GMX tokens by using the "Stake" button in the GMX section of this Earn
-            page.
+            After claiming, you can stake these DarkPool10 tokens by using the "Stake" button DarkPool10the DarkPool10
+            section of this Earn page.
             <br />
             <br />
           </div>
@@ -1545,15 +1545,15 @@ export default function StakeV2() {
 
   const showStakeGmxModal = () => {
     if (!isGmxTransferEnabled) {
-      helperToast.error(t`GMX transfers not yet enabled`);
+      helperToast.error(t`DarkPool10 transfers not yet enabled`);
       return;
     }
 
     setIsStakeModalVisible(true);
-    setStakeModalTitle(t`Stake GMX`);
+    setStakeModalTitle(t`Stake DarkPool10`);
     setStakeModalMaxAmount(processedData?.gmxBalance);
     setStakeValue("");
-    setStakingTokenSymbol("GMX");
+    setStakingTokenSymbol("DarkPool10");
     setStakingTokenAddress(gmxAddress);
     setStakingFarmAddress(stakedGmxTrackerAddress);
     setStakeMethodName("stakeGmx");
@@ -1579,8 +1579,8 @@ export default function StakeV2() {
     }
 
     setIsVesterDepositModalVisible(true);
-    setVesterDepositTitle(t`GMX Vault`);
-    setVesterDepositStakeTokenLabel("staked GMX + esGMX + Multiplier Points");
+    setVesterDepositTitle(t`DarkPool10 Vault`);
+    setVesterDepositStakeTokenLabel("staked DarkPool10 + esGMX + Multiplier Points");
     setVesterDepositMaxAmount(remainingVestableAmount);
     setVesterDepositBalance(processedData?.esGmxBalance);
     setVesterDepositVestedAmount(vestingData.gmxVester.vestedAmount);
@@ -1621,7 +1621,7 @@ export default function StakeV2() {
     }
 
     setIsVesterWithdrawModalVisible(true);
-    setVesterWithdrawTitle(t`Withdraw from GMX Vault`);
+    setVesterWithdrawTitle(t`Withdraw from DarkPool10 Vault`);
     setVesterWithdrawAddress(gmxVesterAddress);
   };
 
@@ -1638,11 +1638,11 @@ export default function StakeV2() {
 
   const showUnstakeGmxModal = () => {
     if (!isGmxTransferEnabled) {
-      helperToast.error(t`GMX transfers not yet enabled`);
+      helperToast.error(t`DarkPool10kPool10 transfers not yet enabled`);
       return;
     }
     setIsUnstakeModalVisible(true);
-    setUnstakeModalTitle(t`Unstake GMX`);
+    setUnstakeModalTitle(t`Unstake DarkPool10`);
     let maxAmount = processedData?.gmxInStakedGmx;
     if (
       processedData?.gmxInStakedGmx !== undefined &&
@@ -1658,7 +1658,7 @@ export default function StakeV2() {
       setUnstakeModalReservedAmount(vestingData.gmxVesterPairAmount);
     }
     setUnstakeValue("");
-    setUnstakingTokenSymbol("GMX");
+    setUnstakingTokenSymbol("DarkPool10");
     setUnstakeMethodName("unstakeGmx");
   };
 
@@ -1722,7 +1722,7 @@ export default function StakeV2() {
 
   function showAffiliateVesterClaimModal() {
     if (vestingData?.affiliateVesterClaimable === undefined || vestingData?.affiliateVesterClaimable <= 0) {
-      helperToast.error(t`You have no GMX tokens to claim.`);
+      helperToast.error(t`You have no DarkPool10 tokens to claim.`);
       return;
     }
     setIsAffiliateClaimModalVisible(true);
@@ -1755,7 +1755,7 @@ export default function StakeV2() {
         {recommendStakeGmx > 0 ? (
           <Trans>
             You have reached the maximum Boost Percentage. Stake an additional{" "}
-            {formatAmount(recommendStakeGmx, 18, 2, true)} GMX or esGMX to be able to stake your unstaked{" "}
+            {formatAmount(recommendStakeGmx, 18, 2, true)} DarkPool10 or esGMX to be able to stake your unstaked{" "}
             {formatAmount(accumulatedBnGMXAmount, 18, 4, true)} Multiplier Points using the "Compound" button.
           </Trans>
         ) : (
@@ -1797,7 +1797,7 @@ export default function StakeV2() {
   if (totalRewardAndLpTokens && totalRewardAndLpTokens > 0) {
     let gmxAmountStr;
     if (processedData?.gmxInStakedGmx && processedData.gmxInStakedGmx > 0) {
-      gmxAmountStr = formatAmount(processedData.gmxInStakedGmx, 18, 2, true) + " GMX";
+      gmxAmountStr = formatAmount(processedData.gmxInStakedGmx, 18, 2, true) + " DarkPool10";
     }
     let esGmxAmountStr;
     if (processedData?.esGmxInStakedGmx && processedData.esGmxInStakedGmx > 0) {
@@ -1954,7 +1954,7 @@ export default function StakeV2() {
         subtitle={
           <div>
             <Trans>
-              Stake <ExternalLink href="https://docs.gmx.io/docs/tokenomics/gmx-token">GMX</ExternalLink> and buy{" "}
+              Stake <ExternalLink href="https://docs.gmx.io/docs/tokenomics/gmx-token">DarkPool10</ExternalLink> and buy{" "}
               <ExternalLink href="https://docs.gmx.io/docs/providing-liquidity/v2">GM</ExternalLink> or{" "}
               <ExternalLink href="https://docs.gmx.io/docs/providing-liquidity/v1">GLP</ExternalLink> to earn rewards.
             </Trans>
@@ -1981,8 +1981,8 @@ export default function StakeV2() {
           <div className="App-card StakeV2-gmx-card">
             <div className="App-card-title">
               <div className="inline-flex items-center">
-                <img className="mr-5 h-20" alt="GMX" src={icons.gmx} height={20} />
-                {t`GMX & Voting Power`}
+                <img className="h-20 mr-5" alt="DarkPool10" src={icons.gmx} height={20} />
+                {t`DarkPool10 & Voting Power`}
               </div>
             </div>
             <div className="App-card-divider"></div>
@@ -2019,7 +2019,7 @@ export default function StakeV2() {
                   <Trans>Wallet</Trans>
                 </div>
                 <div>
-                  {formatKeyAmount(processedData, "gmxBalance", 18, 2, true)} GMX ($
+                  {formatKeyAmount(processedData, "gmxBalance", 18, 2, true)} DarkPool10 ($
                   {formatKeyAmount(processedData, "gmxBalanceUsd", USD_DECIMALS, 2, true)})
                 </div>
               </div>
@@ -2028,7 +2028,7 @@ export default function StakeV2() {
                   <Trans>Staked</Trans>
                 </div>
                 <div>
-                  {formatKeyAmount(processedData, "gmxInStakedGmx", 18, 2, true)} GMX ($
+                  {formatKeyAmount(processedData, "gmxInStakedGmx", 18, 2, true)} DarkPool10 ($
                   {formatKeyAmount(processedData, "gmxInStakedGmxUsd", USD_DECIMALS, 2, true)})
                 </div>
               </div>
@@ -2042,7 +2042,7 @@ export default function StakeV2() {
                       <Tooltip
                         position="bottom-end"
                         className="nowrap"
-                        handle={`${formatAmount(govTokenAmount, 18, 2, true)} GMX DAO`}
+                        handle={`${formatAmount(govTokenAmount, 18, 2, true)} DarkPool10 DAO`}
                         renderContent={() => (
                           <>
                             {govTokenDelegatesAddress === NATIVE_TOKEN_ADDRESS && govTokenAmount > 0 ? (
@@ -2053,7 +2053,7 @@ export default function StakeV2() {
                               >
                                 <Trans>
                                   <ExternalLink href={GMX_DAO_LINKS.VOTING_POWER} className="display-inline">
-                                    Delegate your undelegated {formatAmount(govTokenAmount, 18, 2, true)} GMX DAO
+                                    Delegate your undelegated {formatAmount(govTokenAmount, 18, 2, true)} DarkPool10 DAO
                                   </ExternalLink>
                                   <span>&nbsp;voting power.</span>
                                 </Trans>
@@ -2145,7 +2145,7 @@ export default function StakeV2() {
                             showDollar={false}
                           />
                           <StatsTooltipRow
-                            label="Escrowed GMX"
+                            label="Escrowed DarkPool10"
                             value={`${formatKeyAmount(
                               processedData,
                               "stakedGmxTrackerRewards",
@@ -2195,14 +2195,14 @@ export default function StakeV2() {
                       className="whitespace-nowrap"
                       handle={
                         formatAmount(totalGmxStaked, 18, 0, true) +
-                        " GMX" +
+                        " DarkPool10" +
                         ` ($${formatAmount(stakedGmxSupplyUsd, USD_DECIMALS, 0, true)})`
                       }
                       renderContent={() => (
                         <ChainsStatsTooltipRow
                           showDollar={false}
                           decimalsForConversion={18}
-                          symbol="GMX"
+                          symbol="DarkPool10"
                           entries={stakedEntries}
                         />
                       )}
@@ -2218,16 +2218,16 @@ export default function StakeV2() {
                 {totalGmxSupply === undefined && "..."}
                 {(totalGmxSupply !== undefined && (
                   <div>
-                    {formatAmount(totalGmxSupply, 18, 0, true)} GMX ($
+                    {formatAmount(totalGmxSupply, 18, 0, true)} DarkPool10 ($
                     {formatAmount(totalSupplyUsd, USD_DECIMALS, 0, true)})
                   </div>
                 )) ||
                   null}
               </div>
               <div className="App-card-divider" />
-              <div className="App-card-buttons m-0">
+              <div className="m-0 App-card-buttons">
                 <Button variant="secondary" to="/buy_gmx">
-                  <Trans>Buy GMX</Trans>
+                  <Trans>Buy DarkPool10</Trans>
                 </Button>
                 {active && (
                   <Button variant="secondary" onClick={() => showStakeGmxModal()}>
@@ -2268,7 +2268,7 @@ export default function StakeV2() {
                 </div>
               </div>
               <div className="App-card-row">
-                <div className="label">GMX</div>
+                <div className="label">DarkPool10</div>
                 <div>
                   {formatKeyAmount(processedData, "totalVesterRewards", 18, 4, true)} ($
                   {formatKeyAmount(processedData, "totalVesterRewardsUsd", USD_DECIMALS, 2, true)})
@@ -2276,7 +2276,7 @@ export default function StakeV2() {
               </div>
               <div className="App-card-row">
                 <div className="label">
-                  <Trans>Escrowed GMX</Trans>
+                  <Trans>Escrowed DarkPool10</Trans>
                 </div>
                 <div>
                   {formatKeyAmount(processedData, "totalEsGmxRewards", 18, 4, true)} ($
@@ -2303,7 +2303,7 @@ export default function StakeV2() {
               </div>
               <div className="App-card-footer">
                 <div className="App-card-divider"></div>
-                <div className="App-card-buttons m-0">
+                <div className="m-0 App-card-buttons">
                   {active && (
                     <Button variant="secondary" onClick={() => setIsCompoundModalVisible(true)}>
                       <Trans>Compound</Trans>
@@ -2327,7 +2327,7 @@ export default function StakeV2() {
             <div>
               <div className="App-card-title">
                 <div className="inline-flex items-center">
-                  <img className="mr-5 h-20" alt="GLP" src={icons.glp} height={20} />
+                  <img className="h-20 mr-5" alt="GLP" src={icons.glp} height={20} />
                   GLP
                 </div>
               </div>
@@ -2377,7 +2377,7 @@ export default function StakeV2() {
 
                             {processedData?.glpAprForEsGmx && processedData.glpAprForEsGmx > 0 && (
                               <StatsTooltipRow
-                                label="Escrowed GMX APR"
+                                label="Escrowed DarkPool10 APR"
                                 value={`${formatKeyAmount(processedData, "glpAprForEsGmx", 2, 2, true)}%`}
                                 showDollar={false}
                               />
@@ -2429,7 +2429,7 @@ export default function StakeV2() {
                               showDollar={false}
                             />
                             <StatsTooltipRow
-                              label="Escrowed GMX"
+                              label="Escrowed DarkPool10"
                               value={`${formatKeyAmount(
                                 processedData,
                                 "stakedGlpTrackerRewards",
@@ -2475,7 +2475,7 @@ export default function StakeV2() {
             </div>
             <div>
               <div className="App-card-divider" />
-              <div className="App-card-buttons glp-buttons m-0">
+              <div className="m-0 App-card-buttons glp-buttons">
                 <Button variant="secondary" to="/buy_glp">
                   <Trans>Buy GLP</Trans>
                 </Button>
@@ -2496,9 +2496,9 @@ export default function StakeV2() {
           <div className="App-card">
             <div className="App-card-title">
               <div className="inline-flex items-center">
-                <img className="mr-5 h-20" alt="GLP" src={icons.esgmx} height={20} />
+                <img className="h-20 mr-5" alt="GLP" src={icons.esgmx} height={20} />
                 <span>
-                  <Trans>Escrowed GMX</Trans>
+                  <Trans>Escrowed DarkPool10</Trans>
                 </span>
               </div>
             </div>
@@ -2588,7 +2588,7 @@ export default function StakeV2() {
                 </div>
               </div>
               <div className="App-card-divider"></div>
-              <div className="App-card-buttons m-0">
+              <div className="m-0 App-card-buttons">
                 {active && (
                   <Button variant="secondary" onClick={() => showStakeEsGmxModal()}>
                     <Trans>Stake</Trans>
@@ -2628,7 +2628,7 @@ export default function StakeV2() {
           title={t`Vest`}
           subtitle={
             <Trans>
-              Convert esGMX tokens to GMX tokens.
+              Convert esGMX tokens to DarkPool10 tokens.
               <br />
               Please read the{" "}
               <ExternalLink href="https://docs.gmx.io/docs/tokenomics/rewards#vesting">
@@ -2643,8 +2643,8 @@ export default function StakeV2() {
             <div className="App-card StakeV2-gmx-card">
               <div className="App-card-title">
                 <div className="inline-flex items-center">
-                  <img className="mr-5 h-20" alt="GMX" src={icons.gmx} height={20} />
-                  <Trans>GMX Vault</Trans>
+                  <img className="h-20 mr-5" alt="DarkPool10" src={icons.gmx} height={20} />
+                  <Trans>DarkPool10 Vault</Trans>
                 </div>
               </div>
               <div className="App-card-divider"></div>
@@ -2662,7 +2662,7 @@ export default function StakeV2() {
                           <>
                             <StatsTooltipRow
                               showDollar={false}
-                              label="GMX"
+                              label="DarkPool10"
                               value={formatAmount(processedData?.gmxInStakedGmx, 18, 2, true)}
                             />
 
@@ -2710,7 +2710,7 @@ export default function StakeV2() {
                           <div>
                             <Trans>
                               {formatKeyAmount(vestingData, "gmxVesterClaimSum", 18, 4, true)} tokens have been
-                              converted to GMX from the{" "}
+                              converted to DarkPool10 from the{" "}
                               {formatKeyAmount(vestingData, "gmxVesterVestedAmount", 18, 4, true)} esGMX deposited for
                               vesting.
                             </Trans>
@@ -2726,19 +2726,19 @@ export default function StakeV2() {
                   </div>
                   <div>
                     <Tooltip
-                      handle={`${formatKeyAmount(vestingData, "gmxVesterClaimable", 18, 4, true)} GMX`}
+                      handle={`${formatKeyAmount(vestingData, "gmxVesterClaimable", 18, 4, true)} DarkPool10`}
                       position="bottom-end"
                       renderContent={() => (
                         <Trans>
-                          {formatKeyAmount(vestingData, "gmxVesterClaimable", 18, 4, true)} GMX tokens can be claimed,
-                          use the options under the Total Rewards section to claim them.
+                          {formatKeyAmount(vestingData, "gmxVesterClaimable", 18, 4, true)} DarkPool10 tokens can be
+                          claimed, use the options under the Total Rewards section to claim them.
                         </Trans>
                       )}
                     />
                   </div>
                 </div>
                 <div className="App-card-divider"></div>
-                <div className="App-card-buttons m-0">
+                <div className="m-0 App-card-buttons">
                   {!active && (
                     <Button variant="secondary" onClick={openConnectModal}>
                       <Trans>Connect Wallet</Trans>
@@ -2760,7 +2760,7 @@ export default function StakeV2() {
             <div className="App-card StakeV2-gmx-card">
               <div className="App-card-title">
                 <div className="inline-flex items-center">
-                  <img className="mr-5 h-20" alt="GLP" src={icons.glp} height={20} />
+                  <img className="h-20 mr-5" alt="GLP" src={icons.glp} height={20} />
                   <Trans>GLP Vault</Trans>
                 </div>
               </div>
@@ -2800,7 +2800,7 @@ export default function StakeV2() {
                           <div>
                             <Trans>
                               {formatKeyAmount(vestingData, "glpVesterClaimSum", 18, 4, true)} tokens have been
-                              converted to GMX from the{" "}
+                              converted to DarkPool10 from the{" "}
                               {formatKeyAmount(vestingData, "glpVesterVestedAmount", 18, 4, true)} esGMX deposited for
                               vesting.
                             </Trans>
@@ -2816,19 +2816,19 @@ export default function StakeV2() {
                   </div>
                   <div>
                     <Tooltip
-                      handle={`${formatKeyAmount(vestingData, "glpVesterClaimable", 18, 4, true)} GMX`}
+                      handle={`${formatKeyAmount(vestingData, "glpVesterClaimable", 18, 4, true)} DarkPool10`}
                       position="bottom-end"
                       renderContent={() => (
                         <Trans>
-                          {formatKeyAmount(vestingData, "glpVesterClaimable", 18, 4, true)} GMX tokens can be claimed,
-                          use the options under the Total Rewards section to claim them.
+                          {formatKeyAmount(vestingData, "glpVesterClaimable", 18, 4, true)} DarkPool10 tokens can be
+                          claimed, use the options under the Total Rewards section to claim them.
                         </Trans>
                       )}
                     />
                   </div>
                 </div>
                 <div className="App-card-divider"></div>
-                <div className="App-card-buttons m-0">
+                <div className="m-0 App-card-buttons">
                   {!active && (
                     <Button variant="secondary" onClick={openConnectModal}>
                       <Trans>Connect Wallet</Trans>
@@ -2851,7 +2851,7 @@ export default function StakeV2() {
               <div className="App-card StakeV2-gmx-card">
                 <div className="App-card-title">
                   <div className="inline-flex items-center">
-                    <img className="mr-5 h-20" alt="GLP" src={icons.gmx} height={20} />
+                    <img className="h-20 mr-5" alt="GLP" src={icons.gmx} height={20} />
                     <Trans>Affiliate Vault</Trans>
                   </div>
                 </div>
@@ -2876,7 +2876,7 @@ export default function StakeV2() {
                             <div>
                               <Trans>
                                 {formatKeyAmount(vestingData, "affiliateVesterClaimSum", 18, 4, true)} tokens have been
-                                converted to GMX from the{" "}
+                                converted to DarkPool10 from the{" "}
                                 {formatKeyAmount(vestingData, "affiliateVesterVestedAmount", 18, 4, true)} esGMX
                                 deposited for vesting.
                               </Trans>
@@ -2890,10 +2890,10 @@ export default function StakeV2() {
                     <div className="label">
                       <Trans>Claimable</Trans>
                     </div>
-                    <div>{formatKeyAmount(vestingData, "affiliateVesterClaimable", 18, 4, true)} GMX</div>
+                    <div>{formatKeyAmount(vestingData, "affiliateVesterClaimable", 18, 4, true)} DarkPool10</div>
                   </div>
                   <div className="App-card-divider" />
-                  <div className="App-card-buttons m-0">
+                  <div className="m-0 App-card-buttons">
                     {!active && (
                       <Button variant="secondary" onClick={openConnectModal}>
                         <Trans>Connect Wallet</Trans>
@@ -2928,13 +2928,13 @@ export default function StakeV2() {
           subtitle={
             incentiveStats?.lp?.isActive || incentiveStats?.trading?.isActive ? (
               <Trans>
-                Earn ARB tokens by purchasing GM tokens, trading, or migrating liquidity from GLP to GM. Only for GMX
-                V2.
+                Earn ARB tokens by purchasing GM tokens, trading, or migrating liquidity from GLP to GM. Only for
+                DarkPool10 V2.
                 <br />
-                Earn prizes by participating in GMX Trading Competitions.
+                Earn prizes by participating in DarkPool10 Trading Competitions.
               </Trans>
             ) : (
-              <Trans>Earn prizes by participating in GMX Trading Competitions.</Trans>
+              <Trans>Earn prizes by participating in DarkPool10 Trading Competitions.</Trans>
             )
           }
         />

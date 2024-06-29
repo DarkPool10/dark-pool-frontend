@@ -17,7 +17,7 @@ function renderEscrowedGMXApr(processedData) {
   if (!processedData?.gmxAprForEsGmx || processedData.gmxAprForEsGmx <= 0) return;
   return (
     <StatsTooltipRow
-      label={t`Escrowed GMX APR`}
+      label={t`Escrowed DarkPool10 APR`}
       showDollar={false}
       value={`${formatKeyAmount(processedData, "gmxAprForEsGmx", 2, 2, true)}%`}
     />
@@ -91,7 +91,7 @@ export default function GMXAprTooltip({
         {(recommendStakeGmx ?? 0) > 0 ? (
           <Trans>
             You have reached the maximum Boost Percentage. Stake an additional{" "}
-            {formatAmount(recommendStakeGmx, 18, 2, true)} GMX or esGMX to be able to stake your unstaked{" "}
+            {formatAmount(recommendStakeGmx, 18, 2, true)} DarkPool10 or esGMX to be able to stake your unstaked{" "}
             {formatAmount(accumulatedBnGMXAmount, 18, 4, true)} Multiplier Points using the "Compound" button.
           </Trans>
         ) : (

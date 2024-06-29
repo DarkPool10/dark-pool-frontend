@@ -1369,7 +1369,7 @@ export function getProcessedData(
 }
 
 export function getPageTitle(data) {
-  const title = t`Decentralized Perpetual Exchange | GMX`;
+  const title = t`Decentralized Perpetual Exchange | DarkPool10`;
   return `${data} | ${title}`;
 }
 

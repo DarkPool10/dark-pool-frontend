@@ -32,8 +32,8 @@ export function RedirectPopupModal({
       <br />
       <Trans>
         The website is a community deployed and maintained instance of the open source{" "}
-        <ExternalLink href="https://github.com/gmx-io/gmx-interface">GMX front end</ExternalLink>, hosted and served on
-        the distributed, peer-to-peer <ExternalLink href="https://ipfs.io/">IPFS network</ExternalLink>.
+        <ExternalLink href="https://github.com/gmx-io/gmx-interface">DarkPool10 front end</ExternalLink>, hosted and
+        served on the distributed, peer-to-peer <ExternalLink href="https://ipfs.io/">IPFS network</ExternalLink>.
       </Trans>
       <br />
       <br />
